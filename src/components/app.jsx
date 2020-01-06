@@ -11,9 +11,17 @@ class App extends Component {
       gifs: [],
       selectedGifId: "eA2qEgL5mAsOk"
     }
+    search("Homer");
   }
 
 search = (query) => {
+  giphy('rNXsVwMdH056u8cSUl2HazgHLptzlMkV').search({
+    q: query,
+    rating: 'g',
+  }, function (err, res){
+    console.log(res);
+
+  });
 
 // API call
 
